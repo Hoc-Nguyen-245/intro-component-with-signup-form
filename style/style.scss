@@ -1,0 +1,193 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    appearance: none;
+    list-style: none;
+    outline: none;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-Red: hsl(0, 100%, 74%);
+    --primary-Green: hsl(154, 59%, 51%);
+    --accent-Blue: hsl(248, 32%, 49%);
+    --neutral-Dark-Blue: hsl(249, 10%, 26%); 
+    --neutral-Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url('../assets/img/bg-intro-desktop.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: var(--primary-Red);
+}
+
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin:0px auto;
+    height: 100%;
+    min-height: 100vh;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    #content {
+        width: 100%;
+        max-width: 500px;
+        padding:20px;
+        color:white;
+        p:nth-child(1) {
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 2.7rem;
+            margin-bottom: 30px;
+        }
+        p:nth-child(2) {
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+    }
+    #sign-in-container {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        padding:30px;
+        #header {
+            width: 100%;
+            flex-basis: 50%;
+            padding:20px;
+            background-color: var(--accent-Blue);
+            text-align: center;
+            color:white;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            box-shadow: 0px 8px 0px rgba(0,0,0,0.1);
+            p {
+                font-size:0.8rem;
+                font-weight: 700;
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+        #main-sign-in {
+            width: 100%;
+            height: 100%;
+            flex-basis: 50%;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 8px 0px rgba(0,0,0,0.2);
+            padding:30px;
+            #form {
+                width: 100%;
+                height: 100%;
+                .input {
+                    width: 100%;
+                    height: 40px;
+                    border: 1px solid rgba(0,0,0,0.2);
+                    border-radius: 5px;
+                    padding-left: 20px;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                    &:hover {
+                        border-color: rgba(0,0,0,0.4);
+                    }
+                    &:focus {
+                        border-color: var(--accent-Blue);
+                    }
+                    &::placeholder {
+                        font-weight: 600;
+                    }
+                    &:nth-child(1) {
+                        margin-top: 0px;
+                    }
+                    &.error {
+                        border-color: var(--primary-Red);
+                        border-width: 2px;
+                    }
+                    &.error::placeholder {
+                        color: var(--primary-Red);
+                    }
+                }
+                p {
+                    display:none;
+                    font-weight: 400;
+                    position: relative;
+                    font-size: 0.7rem;
+                    font-style: italic;
+                    text-align: right;
+                    color:var(--primary-Red);
+                    &::before{
+                        content:'';
+                        width: 15px;
+                        height: 15px;
+                        position: absolute;
+                        right:20px;
+                        top:-33px;
+                        display:block;
+                        background-image: url('../assets/img/icon-error.svg');
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: contain;
+                    }
+                    &.error {
+                        display:block;
+                    }
+                }
+                .submit {
+                    display:block;
+                    width: 100%;
+                    border-radius: 5px;
+                    box-shadow: 0px 3px 0px var(--primary-Green);
+                    background-color: hsl(154, 74%, 56%);
+                    color:white;
+                    text-align: center;
+                    font-weight: 500;
+                    letter-spacing: 0.3rem;
+                    font-size: 0.5rem;
+                    margin-bottom: 20px;
+                    margin-top: 15px;
+                    padding:20px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color:hsl(154, 85%, 60%) ;
+                    }
+                }
+                #submit {
+                    display: none;
+                }
+            }
+            #note {
+                text-align: center;
+                font-weight: 400;
+                font-size: 0.7rem;
+                color:rgba(0,0,0,0.4);
+                span {
+                    color: var(--primary-Red);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    main {
+        flex-flow: column wrap;
+        #content {
+            text-align: center;
+        }
+    }
+}

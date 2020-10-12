@@ -1,0 +1,262 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  list-style: none;
+  outline: none;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-Red: hsl(0, 100%, 74%);
+  --primary-Green: hsl(154, 59%, 51%);
+  --accent-Blue: hsl(248, 32%, 49%);
+  --neutral-Dark-Blue: hsl(249, 10%, 26%);
+  --neutral-Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url("../assets/img/bg-intro-desktop.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: var(--primary-Red);
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
+  height: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #content {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  color: white;
+}
+
+main #content p:nth-child(1) {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  margin-bottom: 30px;
+}
+
+main #content p:nth-child(2) {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+main #sign-in-container {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  padding: 30px;
+}
+
+main #sign-in-container #header {
+  width: 100%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 20px;
+  background-color: var(--accent-Blue);
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+main #sign-in-container #header p {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+main #sign-in-container #header p span {
+  font-weight: 400;
+}
+
+main #sign-in-container #main-sign-in {
+  width: 100%;
+  height: 100%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+main #sign-in-container #main-sign-in #form {
+  width: 100%;
+  height: 100%;
+}
+
+main #sign-in-container #main-sign-in #form .input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+main #sign-in-container #main-sign-in #form .input:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+main #sign-in-container #main-sign-in #form .input:focus {
+  border-color: var(--accent-Blue);
+}
+
+main #sign-in-container #main-sign-in #form .input::-webkit-input-placeholder {
+  font-weight: 600;
+}
+
+main #sign-in-container #main-sign-in #form .input:-ms-input-placeholder {
+  font-weight: 600;
+}
+
+main #sign-in-container #main-sign-in #form .input::-ms-input-placeholder {
+  font-weight: 600;
+}
+
+main #sign-in-container #main-sign-in #form .input::placeholder {
+  font-weight: 600;
+}
+
+main #sign-in-container #main-sign-in #form .input:nth-child(1) {
+  margin-top: 0px;
+}
+
+main #sign-in-container #main-sign-in #form .input.error {
+  border-color: var(--primary-Red);
+  border-width: 2px;
+}
+
+main #sign-in-container #main-sign-in #form .input.error::-webkit-input-placeholder {
+  color: var(--primary-Red);
+}
+
+main #sign-in-container #main-sign-in #form .input.error:-ms-input-placeholder {
+  color: var(--primary-Red);
+}
+
+main #sign-in-container #main-sign-in #form .input.error::-ms-input-placeholder {
+  color: var(--primary-Red);
+}
+
+main #sign-in-container #main-sign-in #form .input.error::placeholder {
+  color: var(--primary-Red);
+}
+
+main #sign-in-container #main-sign-in #form p {
+  display: none;
+  font-weight: 400;
+  position: relative;
+  font-size: 0.7rem;
+  font-style: italic;
+  text-align: right;
+  color: var(--primary-Red);
+}
+
+main #sign-in-container #main-sign-in #form p::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 20px;
+  top: -33px;
+  display: block;
+  background-image: url("../assets/img/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+main #sign-in-container #main-sign-in #form p.error {
+  display: block;
+}
+
+main #sign-in-container #main-sign-in #form .submit {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 0px var(--primary-Green);
+          box-shadow: 0px 3px 0px var(--primary-Green);
+  background-color: #3ce29a;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  font-size: 0.5rem;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+main #sign-in-container #main-sign-in #form .submit:hover {
+  background-color: #42f0a5;
+}
+
+main #sign-in-container #main-sign-in #form #submit {
+  display: none;
+}
+
+main #sign-in-container #main-sign-in #note {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+main #sign-in-container #main-sign-in #note span {
+  color: var(--primary-Red);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 720px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  main #content {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
